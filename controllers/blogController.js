@@ -18,7 +18,9 @@ const update = (req, res) => {};
 
 const modify = (req, res) => {};
 
-const destroy = (req, res) => {};
+const destroy = (req, res, next) => {
+ 
+};
 
 const blogController = { index, show, store, update, modify, destroy };
 
