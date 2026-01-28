@@ -1,6 +1,14 @@
 import connection from "../db.js";
 
-const index = (req, res) => {};
+const index = (req, res, next) => {
+  const query = `SELECT * FROM posts`;
+  connection.query(query, (err, results) => {
+    if (err) return next(err);
+    res.json({
+      results: results,
+    });
+  });
+};
 
 const show = (req, res) => {};
 
