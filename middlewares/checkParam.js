@@ -7,7 +7,7 @@ export default function checkParam(req, res, next) {
     if (err) return next(err);
     if (results.length === 0) {
       res.status(404);
-      res.json({
+      return res.json({
         error: "NOT FOUND",
         message: "post not found",
       });
