@@ -5,11 +5,11 @@ import routeNotFound from "./middlewares/routeNotFound.js";
 const app = express();
 const port = 3000;
 
+app.use(express.json());
+
 app.use(express.static("public"));
 
 app.use("/posts", blogRouter);
-
-app.use(express.json());
 
 app.use(routeNotFound);
 
